@@ -1,0 +1,8 @@
+pytest==6.2.4
+pydantic==1.8.2
+fastapi==0.68.1
+websocket-client==1.2.1
+uvicorn==0.15.0
+PyYAML==5.4.1
+Faker==8.12.1
+requests==2.26.0
