@@ -9,10 +9,11 @@
             "type": "python",
             "request": "launch",
             "module": "uvicorn",
+            "env": {"RUN_ENV" : "dev"},
             "args": [
                 "PRODUCER.main:app",
                 "--port", 
-                "8002", 
+                "7002", 
                 "--log-config", 
                 "log4py.yaml"
             ],

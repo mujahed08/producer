@@ -5,6 +5,10 @@ This is a thread-safe implementation of Singleton holding websocket.
 from threading import Lock
 from websocket import create_connection, WebSocket
 from PRODUCER.commons.logger import get_logger
+from PRODUCER.pydantic_models.enviornment import get_settings
+
+settings = get_settings()
+ws_endpoint = f'ws://{settings.broker_host}:8080/ws/broker/main/topic/PRODUCER'
 
 logger = get_logger('ws.py')
 
@@ -50,9 +54,8 @@ class WebSocketConnector(metaclass=SingletonMeta):
     """
 
     def __init__(self) -> None:
-        logger.info('   creating websocket connection to: \
-            ws://demo:8080/ws/broker/main/topic/PRODUCER')
-        self.con = create_connection("ws://demo:8080/ws/broker/main/topic/PRODUCER")
+        logger.info('   creating websocket connection to: %s', ws_endpoint)
+        self.con = create_connection(ws_endpoint)
         logger.info('   connection established')
 
     def send(self, message:str):

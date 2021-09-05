@@ -4,7 +4,7 @@ FastAPI
 
 from fastapi import FastAPI, Depends
 from PRODUCER.commons.logger import get_logger
-from PRODUCER.pydantic.holders import Message, Status
+from PRODUCER.pydantic_models.holders import Message, Status
 from PRODUCER.connector.ws import WebSocketConnector
 
 logger = get_logger('main.py')
