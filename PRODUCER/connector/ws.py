@@ -51,8 +51,8 @@ class WebSocketConnector(metaclass=SingletonMeta):
 
     def __init__(self) -> None:
         logger.info('   creating websocket connection to: \
-            ws://localhost:8080/ws/broker/main/topic/PRODUCER')
-        self.con = create_connection("ws://localhost:8080/ws/broker/main/topic/PRODUCER")
+            ws://demo:8080/ws/broker/main/topic/PRODUCER')
+        self.con = create_connection("ws://demo:8080/ws/broker/main/topic/PRODUCER")
         logger.info('   connection established')
 
     def send(self, message:str):
