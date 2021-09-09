@@ -13,7 +13,7 @@
             "args": [
                 "PRODUCER.main:app",
                 "--port", 
-                "7002", 
+                "8002", 
                 "--log-config", 
                 "log4py.yaml"
             ],
