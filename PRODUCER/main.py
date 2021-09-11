@@ -25,7 +25,7 @@ async def shutdown_event(websocket:WebSocketConnector = Depends(get_websocket)):
 logger.info('   Initialized Fast API app')
 
 
-@app.post("/producer", response_model=Status)
+@app.post("/producer/message", response_model=Status)
 async def produce(message:Message, websocket:WebSocketConnector = Depends(get_websocket)):
     logger.info('   produce function is executing')
     logger.info(message.json())

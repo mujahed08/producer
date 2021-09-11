@@ -12,9 +12,9 @@
             "env": {"RUN_ENV" : "dev"},
             "args": [
                 "PRODUCER.main:app",
-                "--port", 
-                "8002", 
-                "--log-config", 
+                "--port",
+                "8011", 
+                "--log-config",
                 "log4py.yaml"
             ],
             "jinja": true

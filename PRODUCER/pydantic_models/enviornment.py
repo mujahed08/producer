@@ -4,6 +4,7 @@ from pydantic import BaseSettings, Field
 class Settings(BaseSettings):
     broker_host:str = Field(..., env='BROKER_HOST')
     run_env:str = Field(..., env='RUN_ENV')
+    reverse_proxy_host:str = Field(..., env='REVERSE_PROXY_HOST')
 
 
     class Config:
